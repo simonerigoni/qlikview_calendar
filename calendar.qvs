@@ -1,0 +1,74 @@
+﻿///$tab Main
+SET ThousandSep=',';
+SET DecimalSep='.';
+SET MoneyThousandSep=',';
+SET MoneyDecimalSep='.';
+SET MoneyFormat='$#,##0.00;-$#,##0.00';
+SET TimeFormat='h:mm:ss TT';
+SET DateFormat='DD/MM/YYYY';
+SET TimestampFormat='DD/MM/YYYY h:mm:ss[.fff] TT';
+SET FirstWeekDay=6;
+SET BrokenWeeks=1;
+SET ReferenceDay=0;
+SET FirstMonthOfYear=1;
+SET CollationLocale='en-US';
+SET MonthNames='Jan;Feb;Mar;Apr;May;Jun;Jul;Aug;Sep;Oct;Nov;Dec';
+SET LongMonthNames='January;February;March;April;May;June;July;August;September;October;November;December';
+SET DayNames='Mon;Tue;Wed;Thu;Fri;Sat;Sun';
+SET LongDayNames='Monday;Tuesday;Wednesday;Thursday;Friday;Saturday;Sunday';
+
+
+LET holiday_filename = 'italy_holidays.csv';
+
+holidays:
+LOAD Year
+     , Month
+     , Day
+     , NUM(MAKEDATE(Year, Month, Day)) AS data_id
+     , Name
+FROM $(holiday_filename) (txt, codepage is 28591, embedded labels, delimiter is ',', msq);
+
+map_holidays:
+MAPPING LOAD data_id
+	, 'Holiday' AS day_type
+RESIDENT holidays;
+
+min_year:
+LOAD MIN(Year) AS Year
+RESIDENT holidays;
+
+max_year:
+NOCONCATENATE
+LOAD MAX(Year) AS Year
+RESIDENT holidays;
+
+LET start = NUM(MAKEDATE(PEEK('Year', 0, 'min_year'), 1, 1));
+LET end = NUM(MAKEDATE(PEEK('Year', 0, 'max_year'), 1, 1));
+
+DROP TABLE min_year;
+DROP TABLE max_year;
+DROP TABLE holidays;
+
+LET num_of_days = end - start + 1;
+
+date_source:
+LOAD 
+	$(start) + ROWNO() -1 AS date_id
+AUTOGENERATE $(num_of_days);
+
+calendar:
+LOAD date_id
+	, DATE(date_id) AS date
+	, DAY(date_id) AS day
+	, WEEK(date_id) AS week
+	, MONTH(date_id) AS month
+	, DUAL(MONTH(date_id) & '-' & YEAR(date_id), YEAR(date_id) & NUM(MONTH(date_id), '00')) AS month_year 
+	, YEAR(date_id) AS year
+	, WEEKDAY(date_id) AS weekday
+	, 'H' & CEIL(MONTH(date_id)/6) AS half // H1, H2
+	, 'Q' & CEIL(MONTH(date_id)/3) AS quarter // Q1, Q2, Q3, Q4
+	, DUAL('Q' & CEIL(MONTH(date_id)/3) & '-' & YEAR(date_id), YEAR(date_id) & CEIL(MONTH(date_id)/3)) AS quarter_year
+	, IF(WEEKDAY(date_id) = 'Sat' OR WEEKDAY(date_id) = 'Sun', 'Week End', APPLYMAP('map_holidays', date_id, 'Working')) AS day_type
+RESIDENT date_source;
+
+DROP TABLE date_source;
