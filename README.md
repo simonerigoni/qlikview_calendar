@@ -44,6 +44,14 @@ Of course it is possible to play around with the filters and check how the count
 
 You can find more information in this [blog post](https://medium.com/@simone.rigoni01/quick-and-easy-calendar-with-python-and-qlikview-cdd5d2db30e1)
 
-## Acknowledgements
+## List of activities
 
-The QlikView script is based on this awesome [post](https://community.qlik.com/t5/QlikView-Documents/How-to-create-a-Calendar/ta-p/1491361) from [mov](https://community.qlik.com/t5/user/viewprofilepage/user-id/6636) on the [community.qlik.com](https://community.qlik.com) website
+In the [TODO.d](TODO.md) file you can find the list of tasks and on going activities.
+
+## Licensing and acknowledgements
+
+Have a look at [LICENSE.md](LICENSE.md) and many thanks to the author this awesome [post](https://community.qlik.com/t5/QlikView-Documents/How-to-create-a-Calendar/ta-p/1491361) from [mov](https://community.qlik.com/t5/user/viewprofilepage/user-id/6636) on the [community.qlik.com](https://community.qlik.com) website.
+
+## Outro
+
+I hope this repository was interesting and thank you for taking the time to check it out. On my Medium you can find a more in depth [story](https://medium.com/@simone-rigoni01/) and on my Blogspot you can find the same [post](https://simonerigoni01.blogspot.com/) in italian. Let me know if you have any question and if you like the content that I create feel free to [buy me a coffee](https://www.buymeacoffee.com/simonerigoni).

@@ -1,12 +1,20 @@
-# To do list 
+# QlikView Caledar
 
-## New ideas
+## TODO
 
+Overview of the status of the tasks of this project.
 
-## To Do
-
-
-## In Progress
+## Tasks
 
 
-## Done ✓
+### To do
+
+- [ ]
+
+### In Progress
+
+- [ ]
+
+### Done ✓
+
+- [x] Project initialization
