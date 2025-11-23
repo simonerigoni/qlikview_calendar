@@ -28,6 +28,18 @@ This project uses Python 3.8.5 and the following libraries:
 
 For the report I have used [QlikView](https://www.qlik.com/us/products/qlikview) version 12.50.20200.0
 
+## Local configuration
+
+
+
+## Data
+
+Have a look at the `data` folder and its [DATA.md](data/DATA.md) file.
+
+## Testing
+
+No test implemented.
+
 ## Running the code
 
 To generate the holiday CSV file you have to run `python generate_holidays.py --start_year 2015 --end_year 2025` where `--start_year` and `--end_year` are optional parameters
