@@ -9,12 +9,13 @@ Overview of the status of the tasks of this project.
 
 ### To do
 
-- [ ] Use uv and pre-commit instead of custom scripts
+- [ ] None
 
 ### In Progress
 
-- [ ]
+- [ ] None
 
 ### Done ✓
 
 - [x] Project initialization
+- [x] Use uv and pre-commit
