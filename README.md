@@ -21,7 +21,7 @@ The working days/non working days are based on Italian legislation (example for 
 
 ## Software and Libraries
 
-This project uses Python 3.8.5 and the following libraries:
+This project uses Python 3.11 and the following libraries:
 * [argparse](https://docs.python.org/3/library/argparse.html)
 * [holidays](https://pypi.org/project/holidays/)
 
@@ -30,7 +30,14 @@ For the report I have used [QlikView](https://www.qlik.com/us/products/qlikview)
 
 ## Local configuration
 
+To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`. It will install:
+* [Python](https://www.python.org/)
+* [uv](https://docs.astral.sh/uv/)
+* [Pre-commit](https://pre-commit.com/)
 
+Pre-commit is a framework for managing and maintaining multi-language pre-commit hooks. A pre-commit hook is a script that runs before a commit operation in a version control system. This allows to shift left code quality checks and remediations. You can change the hooks by updateing the file `.pre-commit-config.yaml`.
+
+To trigger the pre-commit hooks without an actual commit you can run `pre-commit run --all-files -v`.
 
 ## Data
 
@@ -42,9 +49,9 @@ No test implemented.
 
 ## Running the code
 
-To generate the holiday CSV file you have to run `python generate_holidays.py --start_year 2015 --end_year 2025` where `--start_year` and `--end_year` are optional parameters
+To generate the holiday CSV file you have to run `python generate_holidays.py --start_year 2015 --end_year 2025` where `--start_year` and `--end_year` are optional parameters.
 
-To reload the qvw document you can run `run_report.cmd`
+To reload the qvw document you can run `run_report.cmd`.
 
 ## Results
 
@@ -52,9 +59,7 @@ The report is pretty simple and it is just a check that everything is working as
 
 ![Report](images/report.JPG)
 
-Of course it is possible to play around with the filters and check how the count of day_type changes
-
-You can find more information in this [blog post](https://medium.com/@simone.rigoni01/quick-and-easy-calendar-with-python-and-qlikview-cdd5d2db30e1)
+Of course it is possible to play around with the filters and check how the count of day_type changes.
 
 ## List of activities
 
@@ -66,4 +71,4 @@ Have a look at [LICENSE.md](LICENSE.md) and many thanks to the author this aweso
 
 ## Outro
 
-I hope this repository was interesting and thank you for taking the time to check it out. On my Medium you can find a more in depth [story](https://medium.com/@simone-rigoni01/) and on my Blogspot you can find the same [post](https://simonerigoni01.blogspot.com/) in italian. Let me know if you have any question and if you like the content that I create feel free to [buy me a coffee](https://www.buymeacoffee.com/simonerigoni).
+I hope this repository was interesting and thank you for taking the time to check it out. On my Medium you can find a more in depth [story](https://medium.com/@simone-rigoni01/quick-and-easy-calendar-with-python-and-qlikview-cdd5d2db30e1) and on my Blogspot you can find the same [post](https://simonerigoni01.blogspot.com/) in italian. Let me know if you have any question and if you like the content that I create feel free to [buy me a coffee](https://www.buymeacoffee.com/simonerigoni).
