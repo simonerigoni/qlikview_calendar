@@ -63,7 +63,7 @@ Of course it is possible to play around with the filters and check how the count
 
 ## List of activities
 
-In the [TODO.d](TODO.md) file you can find the list of tasks and on going activities.
+In the [TODO.md](TODO.md) file you can find the list of tasks and on going activities.
 
 ## Licensing and acknowledgements
 
