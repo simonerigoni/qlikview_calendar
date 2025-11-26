@@ -6,6 +6,7 @@ Many times you have to create calendar based reports so it would be nice to have
 To generate a **italy_holidays.csv** CSV file containing the holidays in the required timeframe I am going to use [Python](https://www.python.org/) and then I will use [QlikView](https://www.qlik.com/us/products/qlikview) to ETL the data and create the report.
 
 The working days/non working days are based on Italian legislation (example for year 2020):
+
 * New Year’s Day (Capodanno) – 01/01/2020
 * Epiphany (Epifania) - 06/01/2020
 * Easter Monday (Lunedì di Pasqua) – 13/04/2020
@@ -21,16 +22,17 @@ The working days/non working days are based on Italian legislation (example for 
 
 ## Software and Libraries
 
-This project uses Python 3.11 and the following libraries:
+This project uses Python 3.11 and the most important packages are:
+
 * [argparse](https://docs.python.org/3/library/argparse.html)
 * [holidays](https://pypi.org/project/holidays/)
-
 
 For the report I have used [QlikView](https://www.qlik.com/us/products/qlikview) version 12.50.20200.0
 
 ## Local configuration
 
 To setup a new local enviroment and install all dependencies you can run `.\my_scripts\Set-Up.ps1`. It will install:
+
 * [Python](https://www.python.org/)
 * [uv](https://docs.astral.sh/uv/)
 * [Pre-commit](https://pre-commit.com/)
