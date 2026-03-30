@@ -20,9 +20,7 @@ if __name__ == "__main__":
         type=int,
         help="First year to be considered",
     )
-    parser.add_argument(
-        "--end_year", default=0, type=int, help="Last year to be considered"
-    )
+    parser.add_argument("--end_year", default=0, type=int, help="Last year to be considered")
     args = parser.parse_args()
 
     # check if start_year is previous or after end_year
