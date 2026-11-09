@@ -22,7 +22,7 @@ The working days/non working days are based on Italian legislation (example for 
 
 ## Software and Libraries
 
-This project uses Python 3.11 and the most important packages are:
+This project uses Python 3.14 and the most important packages are:
 
 * [argparse](https://docs.python.org/3/library/argparse.html)
 * [holidays](https://pypi.org/project/holidays/)
