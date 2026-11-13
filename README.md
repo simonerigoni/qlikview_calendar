@@ -1,5 +1,7 @@
 # QlikView Caledar
 
+[![CI](https://github.com/simonerigoni/qlikview_calendar/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/simonerigoni/qlikview_calendar/actions/workflows/ci.yml?query=branch%3Amain) [![License](https://img.shields.io/github/license/simonerigoni/qlikview_calendar)](LICENSE.md) [![Python](https://img.shields.io/badge/python-3.14-blue)](pyproject.toml) [![uv](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/uv/main/assets/badge/v0.json)](https://github.com/astral-sh/uv) [![pre-commit](https://img.shields.io/badge/pre--commit-enabled-brightgreen?logo=pre-commit)](https://github.com/pre-commit/pre-commit) [![Renovate](https://img.shields.io/badge/renovate-enabled-brightgreen?logo=renovatebot)](https://renovatebot.com)
+
 ## Introduction
 
 Many times you have to create calendar based reports so it would be nice to have a calendar already in place and ready to copy/paste into your reports script. In this case I am focusing on QlikView reports and since I am currently based in Italy I will consider the working days/non working days are based on Italian legislation.
