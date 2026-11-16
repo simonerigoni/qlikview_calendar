@@ -3,10 +3,10 @@
 # python generate_holidays.py --start_year 2015 --end_year 2025
 
 
-import datetime
 import argparse
-import holidays
+import datetime
 
+import holidays
 
 OUTPUT_FILENAME = "data/italy_holidays.csv"
 HEADER = ["Year", "Month", "Day", "Name"]
