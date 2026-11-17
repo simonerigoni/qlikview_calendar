@@ -13,7 +13,6 @@ dependencies = [
 
 
 [project.urls]
-Homepage = "https://github.com/simonerigoni/qlikview_calendar"
 Repository = "https://github.com/simonerigoni/qlikview_calendar"
 Medium = "https://medium.com/@simone-rigoni01/quick-and-easy-calendar-with-python-and-qlikview-cdd5d2db30e1"
 
