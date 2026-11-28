@@ -89,7 +89,7 @@ In the [TODO.md](TODO.md) file you can find the list of tasks and ongoing activi
 
 ## Licensing and acknowledgements
 
-Have a look at [LICENSE.md](LICENSE.md) and many thanks to the author this awesome [post](https://community.qlik.com/t5/QlikView-Documents/How-to-create-a-Calendar/ta-p/1491361) from [mov](https://community.qlik.com/t5/user/viewprofilepage/user-id/6636) on the [community.qlik.com](https://community.qlik.com) website.
+Have a look at [LICENSE.md](LICENSE.md) and many thanks to the author this awesome [post](https://web.archive.org/web/20201028091338/https://community.qlik.com/t5/QlikView-Documents/How-to-create-a-Calendar/ta-p/1491361) from [mov](https://web.archive.org/web/20220519000915/https://community.qlik.com/t5/user/viewprofilepage/user-id/6636) on the [community.qlik.com](https://community.qlik.com) website.
 
 ## Outro
 
